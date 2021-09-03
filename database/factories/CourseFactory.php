@@ -24,13 +24,12 @@ class CourseFactory extends Factory
         return [
             'name' => $this->faker->sentence(),
             'slug' => $this->faker->slug(),
-            'image' => 'cursos/' . $this->faker->image('public/storage/cursos',12800, 720, null,false, true),
+            'image' => 'cursos/' . $this->faker->image('public/storage/cursos', 1200, 720, null, false, true),
             'description' => $this->faker->text(800),
-            
-            /* CAMPOS DE LAS RELACIONES */
-            'user_id' => rand(1,5),
-            'category_id' => rand(1,3),
 
+            /* CAMPOS DE LAS RELACIONES */
+            'user_id' => rand(1, 5),
+            'category_id' => rand(1, 3),
         ];
     }
 }
