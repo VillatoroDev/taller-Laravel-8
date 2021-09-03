@@ -1133,6 +1133,12 @@ select {
 .col-span-6 {
 	grid-column: span 6 / span 6;
 }
+.col-span-1 {
+	grid-column: span 1 / span 1;
+}
+.col-span-2 {
+	grid-column: span 2 / span 2;
+}
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
@@ -1253,6 +1259,9 @@ select {
 }
 .h-20 {
 	height: 5rem;
+}
+.h-24 {
+	height: 6rem;
 }
 .min-h-screen {
 	min-height: 100vh;
@@ -1577,6 +1586,9 @@ select {
 .p-6 {
 	padding: 1.5rem;
 }
+.p-8 {
+	padding: 2rem;
+}
 .px-4 {
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -1708,6 +1720,10 @@ select {
 .text-3xl {
 	font-size: 1.875rem;
 	line-height: 2.25rem;
+}
+.text-4xl {
+	font-size: 2.25rem;
+	line-height: 2.5rem;
 }
 .font-medium {
 	font-weight: 500;
