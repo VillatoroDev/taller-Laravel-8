@@ -7,7 +7,16 @@
                 <li class="font-medium text-sm text-gray-400 uppercase mb-4">
                     Contenido
                 </li>
-
+                @foreach ($course->posts as $post)
+                    <li class="flex items-center text-gray-600 mt-2">
+                        {{ $post->name }}
+                        @if ($post->free)
+                            <span class="text-xs text-white font-semibold bg-indigo-600 px-2 rounded-full ml-auto">
+                                Gratis
+                            </span>
+                        @endif
+                    </li>
+                @endforeach
             </ul>
         </div>
 
@@ -22,6 +31,13 @@
                     <p class="text-gray-300 text-xs">{{ $course->created_at->diffForHumans() }}</p>
                 </div>
             </div>
+            {{-- Cursos similares --}}
+            <div class="grid grid-cols-2 gap-4 my-8">
+                @foreach ($course->similar() as $course)
+                    <x-course-card :course="$course" />
+                @endforeach
+            </div>
+            {{-- Cursos similares --}}
         </div>
     </div>
     <div class="text-center mt-4">
